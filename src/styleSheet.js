@@ -1,14 +1,16 @@
-export const styleSheet=`
-#welcome-text {
-    font-size: 24px;
-    padding-top: 20px;
-    qproperty-alignment: 'AlignHCenter';
-    font-family: 'sans-serif';
+export default `
+#body {
+    flex: 1;
+    flex-direction: row;
 }
 
-#step-1, #step-2 {
-    font-size: 18px;
-    padding-top: 10px;
-    padding-horizontal: 20px;
+#footer {
+    flex-direction: row;
+    justify-content: 'space-between';
+    align-items: 'center';
+    height: 60;
+    padding-left: 24px;
+    padding-right: 12px;
+    background-color: #1a2326;
 }
 `;
