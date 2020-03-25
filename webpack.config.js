@@ -16,6 +16,9 @@ module.exports = (env, argv) => {
       __dirname: true,
       __filename: true
     },
+    externals: {
+      "node-hid": 'commonjs node-hid',
+    },
     module: {
       rules: [
         {

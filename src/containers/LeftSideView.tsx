@@ -2,16 +2,16 @@ import React from 'react';
 import { Text, View } from '@nodegui/react-nodegui';
 import { getBase64Image } from '../globalFunctions';
 
-const { leftSideView, deviceHeader } = require('../style').default;
+const { leftSideView, menuHeader, title } = require('../style').default;
 
 export default function LeftSideView() {
   return (
     <View style={leftSideView}>
       <View
-        style={deviceHeader}>
+        style={menuHeader}>
         <Text style={`flex: 1;`}>
           {`<img src="${getBase64Image('./assets/profile.png')}" alt="profile" />
-            <span style="color: white; font-size: 14px; font-weight: bold">PROFILES</Text>`}
+            <span style="${title}">PROFILES</Text>`}
         </Text>
         <Text>{`<img src="${getBase64Image('./assets/menu.png')}" alt="menu" />`}</Text>
       </View>
@@ -22,7 +22,7 @@ export default function LeftSideView() {
           <Text style={`margin-horizontal: 16px;`}>
             {`<img src="${getBase64Image('./assets/device.png')}" alt="device" />`}
           </Text>
-          <Text style={`padding: 0; color: white; font-size: 14px; font-weight: bold`}>DEFAULT</Text>
+          <Text style={title}>DEFAULT</Text>
         </View>
       </View>
       {[0, 1, 2, 3, 4].map(key =>
